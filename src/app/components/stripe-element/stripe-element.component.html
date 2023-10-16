@@ -1,0 +1,24 @@
+<div class="mt-5">
+  <label for="">Update the theme</label>
+  <div class="d-flex mb-2">
+    <div class="form-check mx-2" *ngFor="let theme of themeList">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" [id]="theme.value"
+        [checked]="theme.value === 'stripe'" (change)="onChange(theme.value)">
+      <label class="form-check-label" [for]="theme.value">
+        {{theme.label}}
+      </label>
+    </div>
+    <div>
+      <select class="form-control" (change)="onTabChange($event)">
+        <option value="tabs">Tabs</option>
+        <option value="accordion">Accordion</option>
+      </select>
+    </div>
+  </div>
+  <div id="payment-element">
+  </div>
+  <button class="w-100 btn btn-primary" mat-raised-button type="submit" (click)="handleSubmit($event)">
+    <span>Pay now
+    </span>
+  </button>
+</div>

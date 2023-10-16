@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StripeElementComponent } from './components/stripe-element/stripe-element.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StripeElementComponent
   ],
   imports: [
     BrowserModule,
